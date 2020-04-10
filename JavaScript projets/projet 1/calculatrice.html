@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="style/calculatrice.css" media="all"/> 
+	<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+
+</head>
+<body>
+<div id="output">Quick Math !</div>
+<div id ="superconteneur"> <!-- contient l'ensemble des conteneurs(bouttons), avec flexbox permet de placer l'ensemble des conteneurs en groupe-->
+<div id="conteneur"> <!-- contient un boutton-->
+  
+  <div><input type="button" value='sqrt' onclick='sqrt(this)'/></div>
+
+  <div><input type="button" value='%' onclick='ShowValue(this)'/></div>
+ <!-- fonction d'affichage de la valeur, le this se réfère à la value -->
+  <div><input type="button" value='CE' onclick='rem1(this)'/></div>
+  <!-- fonction pour supprimer le dernier chiffre rentré -->
+  <div><input type="button" value='AC' onclick='Reset(this)'/></div>
+<!-- réinitialiser à 0 les entrés-->
+  <div><input type="button" value='/' onclick='ShowValue(this)'/></div>
+  
+  <div><input type="button" value='7' onclick='ShowValue(this)'/></div>
+  
+  <div><input type="button" value='8' onclick='ShowValue(this)'/></div>
+  
+  <div><input type="button" value='9' onclick='ShowValue(this)'/></div>
+  
+  <div><input type="button" value='*' onclick='ShowValue(this)'/></div>
+  
+  <div><input type="button" value='4' onclick='ShowValue(this)'/></div>
+  
+  <div><input type="button" value='5' onclick='ShowValue(this)'/></div>
+  
+  <div><input type="button" value='6' onclick='ShowValue(this)'/></div>
+  
+  <div><input type="button" value='-' onclick='ShowValue(this)'/></div>
+  
+  <div><input type="button" value='1' onclick='ShowValue(this)'/></div>
+  
+  <div><input type="button" value='2' onclick='ShowValue(this)'/></div>
+
+  <div><input type="button" value='3' onclick='ShowValue(this)'/></div>
+  
+  <div><input type="button" value='+' onclick='ShowValue(this)'/></div>
+  
+  <div><input type="button" value='0' onclick='ShowValue(this)'/></div>
+  
+  <div><input type="button" value='.' onclick='ShowValue(this)'/></div>
+  
+  <div><input type="button" value='=' onclick='quickMath(this)'/></div>
+ <!-- afficher le résultat des opérations rentrer dans le quickmath --> 
+</div>
+</div>
+<script type="text/javascript">
+	let input = "";
+//permet de saisir dans quickmath la valeur attribuer au bouton cliqué
+    function ShowValue(btn){  //btn est un argument de la fonction showvalue, il fait référence au bouton cliqué
+    input += btn.value; //ajoute le bouton cliquer dans la variable input
+      console.log(input);
+      document.getElementById("output").innerHTML = input; //remplace la valeur des éléments ayant pour id "output" (ici le quickmath) et la remplace par la valeur de la variable input
+    }
+    
+    function sqrt(){ 
+   	input = Math.sqrt(input); //fonction math.sqrt avec comme arg l'input actuel, donne le résulat immédiatement.
+    console.log(input);
+    document.getElementById("output").innerHTML = input;
+    } 
+//Fait le calcul et envoie dans quickmath
+function quickMath(){ //la fonction ne prend pas d'argument
+  console.log(eval(input)); //envoie dans la console le résultat des opération de la variable input visible dans le output
+  input = eval(input);
+  document.getElementById("output").innerHTML =input; //affiche dans le output le résultat des opération de la variable input 
+     //affecte le résultat comme nouvelle valeur à l'input
+}
+//Reset
+function Reset(){ //ne prend pas d'arguments
+   document.getElementById("output").innerHTML = "0"; //affecte comme nouvelle valeur à l'input ""  et affiche 0 dans l'output
+  input = "";
+}
+//rem
+function rem1(){ //ne prend pas d'arguments
+input = input.replace(input.slice(-1), ""); //slice(-1) sélectionne le dernier caractère de l'input. Remplace le dernier caractère de la variable input par "". Suppression du caractère
+    console.log(input);
+ document.getElementById("output").innerHTML = input; //affiche dans l'output l'input
+}
+</script>
+</body>
+</html>	

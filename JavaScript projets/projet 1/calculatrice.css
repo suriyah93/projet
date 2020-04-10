@@ -1,0 +1,83 @@
+
+input{
+  width: 150px;
+  height: 100px;
+  border-radius: 25px;
+}
+
+input:hover{
+ background: #64DC51; 
+ transition: background 0.3s;
+}
+#output{
+  margin: 0 auto;
+  width: 400px;
+  background: white;
+  text-align: center;
+  margin-top: 50px;
+  height: 50px;
+  font-size: 40px;
+  font-family: 'Lato', sans-serif;
+  border-radius: 25px;
+}
+#superconteneur {
+  border-radius: 25px;
+  margin: 0 auto;
+  height: 500px;
+  width: 600px;
+
+ 
+}
+body {
+  background-color: #FF573E;
+  animation: colorchange 20s;
+  animation-iteration-count: 300;
+  -webkit-animation: colorchange 20s; 
+  -webkit-animation-iteration-count: 300;
+}
+   @keyframes colorchange
+    {
+      0%   {background: #ACF39D;}
+      25%  {background: #E85F5C;}
+      50%  {background: #9CFFFA;}
+      75%  {background: #773344;}
+      100% {background: #E3B5A4;}
+    }
+    @-webkit-keyframes colorchange 
+    {
+      0%   {background: red;}
+      25%  {background: yellow;}
+      50%  {background: blue;}
+      75%  {background: green;}
+      100% {background: red;}
+    }
+#conteneur
+{
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align: center;
+  margin: 0 auto;
+    display: flex;
+}
+
+
+input[value="AC"]{ font-size: 50px;font-family: 'Lato', sans-serif; }
+input[value="CE"]{ font-size: 50px;font-family: 'Lato', sans-serif; }
+input[value="%"]{ font-size: 50px;font-family: 'Lato', sans-serif; }
+input[value="/"]{ font-size: 50px; font-family: 'Lato', sans-serif;}
+input[value="7"]{ font-size: 50px;font-family: 'Lato', sans-serif; }
+input[value="8"]{ font-size: 50px;font-family: 'Lato', sans-serif; }
+input[value="9"]{ font-size: 50px; font-family: 'Lato', sans-serif;}
+input[value="*"]{ font-size: 50px; font-family: 'Lato', sans-serif;}
+input[value="4"]{ font-size: 50px;font-family: 'Lato', sans-serif; }
+input[value="5"]{ font-size: 50px; font-family: 'Lato', sans-serif;}
+input[value="6"]{ font-size: 50px; font-family: 'Lato', sans-serif;}
+input[value="-"]{ font-size: 50px; font-family: 'Lato', sans-serif;}
+input[value="1"]{ font-size: 50px; font-family: 'Lato', sans-serif;}
+input[value="2"]{ font-size: 50px;font-family: 'Lato', sans-serif; }
+input[value="3"]{ font-size: 50px; font-family: 'Lato', sans-serif;}
+input[value="+"]{ font-size: 50px; font-family: 'Lato', sans-serif;}
+input[value="0"]{ font-size: 50px;font-family: 'Lato', sans-serif; }
+input[value="1"]{ font-size: 50px; font-family: 'Lato', sans-serif;}
+input[value="."]{ font-size: 50px; font-family: 'Lato', sans-serif;}
+input[value="="]{ font-size: 50px;font-family: 'Lato', sans-serif; }

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Maternel?</title>
+<link href ="css/quizz.css" rel ="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+<script src = "quizz.js"></script>
+
+</head>
+
+
+<body>
+<h1>Le quizz!</h1>
+
+
+<form id = "quiz" name = "quiz">
+
+
+<p class = "questions">quelle est la couleur du soleil</p>
+<input id = "textbox" type = "text" name = "question1">
+
+<p class = "questions">Et celle du ciel</p>
+<input type = "radio" id = "mc" name = "question2" value = "bleu">bleu<br>
+<input type = "radio" id = "mc" name = "question2" value = "jaune"> jaune<br>
+
+<p class = "questions">Quelle couleur ne fait pas partie de l'arc en ciel</p>
+
+<input type = "radio" id = "mc" name = "question3" value = "violet"> violet<br>
+<input type = "radio" id = "mc" name = "question3" value = "marron"> marron<br>
+
+
+<input id = "button" type = "button" value = "j'ai finis" onclick = "check();">
+
+
+</form>
+
+<div id = "after_submit">
+<p id = "number_correct"></p>
+<p id = "message"></p>
+</div>
+</html>
+
+</body>
